@@ -1,5 +1,4 @@
-var lastInput = "";
-
+var lastInput = ""; // variável global que guarda o último input
 $(document).ready(function() {
 	$("input:button").click(function(){
 	//quando um input do tipo button é clicado, a função é chamada
