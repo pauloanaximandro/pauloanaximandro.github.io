@@ -21,7 +21,8 @@
         window.onload = function() {
             console.log('Setting up socket connections');
 
-            device = io('http://127.0.0.1:3000/api/robots/rosie/devices/led');
+            // device = io('http://127.0.0.1:3000/api/robots/rosie/devices/led');
+            device = io('http://pauloanaximandro.github.io/api/robots/rosie/devices/led');
             setInterval(function() {
                 device.emit('toggle');
             }, 250);
