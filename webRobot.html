@@ -30,17 +30,17 @@
                 console.log('On Device');
                 console.log(' Event', payload.event);
                 console.log(' Data', payload.data);
-                $('messages').append($('<li>').text('On Device: '));
-                $('messages').append($('<li>').text(' Event:'+payload.event.toString()));
+                $('#messages').append($('<li>').text('On Device: '));
+                $('#messages').append($('<li>').text(' Event:'+payload.event.toString()));
                 if(!!payload.data) {
-                    $('messages').append($('<li>').text(' Data:'+payload.data.toString()));
+                    $('#messages').append($('<li>').text(' Data:'+payload.data.toString()));
                 }
-                $('messages').append($('<hr />'));
+                $('#messages').append($('<hr />'));
             });
 
             msg = 'You have been subscribed to Cylon sockets:' + device.nsp;
 
-            $('messages').append($('<li>').text(msg));
+            $('#messages').append($('<li>').text(msg));
         };
     </script>
     <body>
