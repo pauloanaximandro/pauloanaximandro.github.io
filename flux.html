@@ -210,7 +210,7 @@ function setVisibility(id, visibility) {
 							<tr valign=top><td>B.&nbsp;</td><td>O switch/hub conectado à interface de saída do roteador do gateway padrão está fora do ar ou bloqueado.
 							<font size=2>Confira as luzes de alimentação e link no referido switch/hub.</font></td></tr>
 							<tr valign=top><td>C.&nbsp;</td><td>O servidor DHCP está retornando a máscara de sub-rede errada.
-							<font size=2>Isto poderia fazer as máquinas pensarem que o destino está na mesma LAN, quando na verdade está numa outra rede. Configure o escopo do servidor DHCP adequadamente para que informe a máscara de sub-rede correta. </font></td></tr>
+							<font size=2>Isso poderia fazer as máquinas pensarem que o destino está na mesma LAN, quando na verdade está numa outra rede. Configure o escopo do servidor DHCP adequadamente para que informe a máscara de sub-rede correta. </font></td></tr>
 							</table><hr width=50%>
 							Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 							</center></div></div>
@@ -234,12 +234,12 @@ function setVisibility(id, visibility) {
 							<div id="y-y-n-n-d-y-d-d" style="display:none;"><div ><center><b>&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 							<table border=0 cellpadding=0 cellspacing=0 align=center width="400">
 							<tr valign=top><td colspan=2 align=center><b><u>Soluções Possíveis</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td>Default gateway router’s outgoing interface is disconnected, disabled, misconfigured, or faulty.
-							<font size=2>Check its link-light.  Check its IP configuration.  Try pinging from the router itself to the next router.</font></td></tr>
-							<tr valign=top><td>B.&nbsp;</td><td>The switch/hub connected to the outgoing interface of the default gateway router is down or locked-up.
-							<font size=2>Check the power & link-lights on that switch/hub.</font></td></tr>
-							<tr valign=top><td>C.&nbsp;</td><td>DHCP server is giving out wrong subnet mask.
-							<font size=2>This could make the workstations think the destination is on the same LAN, when it is really on a different one. Properly configure DHCP server’s scope to provide correct subnet mask. </font></td></tr>
+							<tr valign=top><td>A.&nbsp;</td><td>A interface de saíde do roteador do gateway padrão está desconectada, desabilitada, configurada incorretamente ou com defeito.
+							<font size=2>Confira a luz do link desse roteador. Confira a configuração de IP dele. Dê um ping a partir dele para o roteador seguinte.</font></td></tr>
+							<tr valign=top><td>B.&nbsp;</td><td>O switch/hub conectado à interface de saída do roteador do gateway padrão está fora do ar ou bloqueado.
+							<font size=2>Confira as luzes de power e link nesse switch/hub.</font></td></tr>
+							<tr valign=top><td>C.&nbsp;</td><td>O servidor DHCP está retornando a máscara de sub-rede errada.
+							<font size=2>Isso poderia fazer as máquinas pensarem que o destino está na mesma LAN, quando na verdade está numa outra rede. Configure o escopo do servidor DHCP adequadamente para que informe a máscara de sub-rede correta. </font></td></tr>
 							</table><hr width=50%>
 							Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 							</center></div></div>
@@ -247,22 +247,22 @@ function setVisibility(id, visibility) {
 							<div id="y-y-n-n-d-y-d-f" style="display:none;"><div ><center><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8595;<br>
 							<table border=0 cellpadding=0 cellspacing=0 align=center width="400">
 							<tr valign=top><td colspan=2 align=center><b><u>Soluções Possíveis</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td> Destination down or locked-up.
-							<font size=2>Boot or reboot it.  Plug it in first if it is unplugged from power.</font></td></tr>
-							<tr valign=top><td>B.&nbsp;</td><td>Bad cable or cable unplugged between destination and switch/hub.
-							<font size=2>If the link-lights are not lit on the destination, this is probably the problem.</font></td></tr>
-							<tr valign=top><td>C.&nbsp;</td><td>Misconfigured IP settings on destination.
-							<font size=2>Check its IP settings and correct them if necessary.</font></td></tr>
-							<tr valign=top><td>D.&nbsp;</td><td>Destination’s firewall software is blocking access.
-							<font size=2>Try disabling firewall software on destination.  If it fixes problem, reconfigure firewall software to allow access to your LAN.</font></td></tr>
-							<tr valign=top><td>E.&nbsp;</td><td>Faulty, disabled, or misconfigured NIC on destination.
-							<font size=2>Verify NIC is enabled and has correct drivers installed. Verify that it is configured for correct speed.  Test with loopback or swap with another NIC to see if it is bad.</font></td></tr>
-							<tr valign=top><td>F.&nbsp;</td><td>Malware infection on destination server or it has been hacked.
-							<font size=2>Scan server for malware infection using anti-malware software such as MalwareBytes. Check for signs of break-in (look at the logs).</font></td></tr>
-							<tr valign=top><td colspan=2 align=center><b><u>If All Else Fails</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td>Sniff the network with Wireshark on the destination while recreating the problem.
-							<font size=2>See if packets are actually arriving at destination. Look for packets containing diagnostic or error messages.</font></td></tr>
-							</table><hr width=50%>
+							<tr valign=top><td>A.&nbsp;</td><td> Destino fora do ar ou bloqueado.
+							<font size=2>Reincie-o.</font></td></tr>
+							<tr valign=top><td>B.&nbsp;</td><td>Cabo com defeito ou desconectado entre o destino e o switch/hub.
+							<font size=2>Se a luz do link não estiver acesa no destino, o problema provavelmente é esse.</font></td></tr>
+							<tr valign=top><td>C.&nbsp;</td><td>Configurações de IP incorretas no destino.
+							<font size=2>Confira as configurações de IP do destino e corrija-as caso necessário.</font></td></tr>
+							<tr valign=top><td>D.&nbsp;</td><td>O software de firewall do destino está bloqueando o acesso.
+							<font size=2>Tente desabilitar o firewall no destino. Se isso resolver o problema, reconfigure o firewall para permitir acesso de sua LAN.</font></td></tr>
+							<tr valign=top><td>E.&nbsp;</td><td>Placa de rede com defeito, desabilitada ou configurada incorretamente no destino.
+							<font size=2>Verifique se a placa está habilitada e tem os drivers corretos instalado. Verifique se está configurada para a velocidade correta. Troque por outra placa de rede para ver se está com defeito.</font></td></tr>
+							<tr valign=top><td>F.&nbsp;</td><td>Servidor de destino vítima de malware ou hackeado.
+							<font size=2>Use um antivírus para varrer o servidor em busca de algum malware. Observe os logs e tente identificar sinais de invasão.</font></td></tr>
+							<tr valign=top><td colspan=2 align=center><b><u>Se nada der certo</u></b></td></tr>
+                            <tr valign=top><td>A.&nbsp;</td><td>Vasculhe a rede com o Wireshark no destino enquanto reproduz o problema.
+                            <font size=2>Confira se os pacotes realmente chegam ao destino. Procure por pacotes contendo mensagens de diagnóstico e/ou erro.</font></td></tr>
+                            </table><hr width=50%>
 							Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 							</center></div></div>
 
