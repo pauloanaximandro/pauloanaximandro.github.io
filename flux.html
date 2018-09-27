@@ -165,26 +165,26 @@ function setVisibility(id, visibility) {
 						<tr valign=top><td>E.&nbsp;</td><td>O firewall de destino está bloqueando o acesso.
 						<font size=2>Tente desabilitar o firewall no destino. Se isso resolver, reconfigure-o para permitir acesso de sua LAN.</font></td></tr>
 						<tr valign=top><td>F.&nbsp;</td><td>Placa de rede com defeito o configurada incorretamente no destino.
-						<font size=2>Verifique se a placa de rede está habilitada e tem os drivers corretos instalados. Verifique se está configurada para a velocidade correta. Teste com loopback troque por outra placa de rede Verify NIC is enabled and has correct drivers installed. Verify that it is configured for correct speed.  Test with loopback or swap with another NIC to see if it is bad.</font></td></tr>
-						<tr valign=top><td>G.&nbsp;</td><td>Malware infection on destination server or it has been hacked.
-						<font size=2> Scan server for malware infection using anti-malware software such as MalwareBytes. Check for signs of break-in (look at the logs).</font></td></tr>
-						<tr valign=top><td colspan=2 align=center><b><u>If All Else Fails</u></b></td></tr>
-						<tr valign=top><td>A.&nbsp;</td><td>Sniff the network with Wireshark on the destination while recreating the problem.
-						<font size=2>See if packets are actually arriving at destination.  Look for packets containing diagnostic or error messages.</font></td></tr>
+						<font size=2>Verifique se a placa de rede está habilitada e tem os drivers corretos instalados. Verifique se está configurada para a velocidade correta. Troque por outra placa de rede para ver se está com defeito.</font></td></tr>
+						<tr valign=top><td>G.&nbsp;</td><td>Servidor de destino vítima de malware ou hackeado.
+						<font size=2> Use um antivírus para varrer o servidor em busca de algum malware. Observe os logs e tente identificar sinais de invasão.</font></td></tr>
+						<tr valign=top><td colspan=2 align=center><b><u>Se nada der certo</u></b></td></tr>
+						<tr valign=top><td>A.&nbsp;</td><td>Vasculhe a rede com o Wireshark no destino enquanto reproduz o problema.
+						<font size=2>Confira se os pacotes realmente chegam ao destino. Procure por pacotes contendo mensagens de diagnóstico e/ou erro.</font></td></tr>
 						</table><hr width=50%>
 						Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 						</center></div></div>
 
-						<div id="y-y-n-n-d-y-i" style="display:none;"><div ><center><b>&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><font face=courier>tracert</font> the destination by IP address. How far did the trace go?</b><br>
-						<table cellpadding=0 cellspacing=0 align=center border=0><tr valign=top><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-i', 'none'); setVisibility('y-y-n-n-d-y-i-d', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-h',{duration:1.0}); return false;">Past the default gateway to other LANs, but not onto the Internet</a></b></td><td> &nbsp;ou&nbsp; </td><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-h', 'none'); setVisibility('y-y-n-n-d-y-i-d', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-i',{duration:1.0}); return false;">Past your routers and onto the Internet, but not to the destination.</a></b></td><td> &nbsp;ou&nbsp; </td><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-h', 'none'); setVisibility('y-y-n-n-d-y-i-i', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-d',{duration:1.0}); return false;">Not past the default gateway.</a></b></td></tr></table>
+						<div id="y-y-n-n-d-y-i" style="display:none;"><div ><center><b>&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Dê um <font face=courier>tracert</font> no endereço IP do destino. Até onde o rastreamento chegou?</b><br>
+						<table cellpadding=0 cellspacing=0 align=center border=0><tr valign=top><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-i', 'none'); setVisibility('y-y-n-n-d-y-i-d', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-h',{duration:1.0}); return false;">Passou do gateway padrão até outras LANs, mas não chegou na internet</a></b></td><td> &nbsp;ou&nbsp; </td><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-h', 'none'); setVisibility('y-y-n-n-d-y-i-d', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-i',{duration:1.0}); return false;">Passou por seus roteadores até a internet, mas não chegou no destino.</a></b></td><td> &nbsp;ou&nbsp; </td><td width=250 align=center><b><a class="doc2" href="#" onclick="setVisibility('y-y-n-n-d-y-i-h', 'none'); setVisibility('y-y-n-n-d-y-i-i', 'none'); effect_1 = Effect.SlideDown('y-y-n-n-d-y-i-d',{duration:1.0}); return false;">Não passou do gateway padrão.</a></b></td></tr></table>
 
 							<div id="y-y-n-n-d-y-i-h" style="display:none;"><div ><center><b>&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 							<table border=0 cellpadding=0 cellspacing=0 align=center width="400">
 							<tr valign=top><td colspan=2 align=center><b><u>Soluções Possíveis</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td>One of the routers between your default gateway and the router connected to the Internet is down, misconfigured, disconnected, or faulty. 
-							<font size=2>Restart suspect router. Check link-lights.  Check IP configurations.  Check cables.  Try pinging from the suspect router to the next router.</font></td></tr>
-							<tr valign=top><td>B.&nbsp;</td><td>A switch/hub connecting routers to one another is down or locked-up.
-							<font size=2>A switch/hub connecting routers to one another is down or locked-up.</font></td></tr>
+							<tr valign=top><td>A.&nbsp;</td><td>Um dos roteadores entre seu gateway padrão e o roteador conectado à internet está fora do ar, configurado incorretamente, desconectado ou com defeito. 
+							<font size=2>Reinicie o roteador suspeito. Confira a luz do link. Confira as configurações de IP. Confira os cabos. Tente dar ping do roteador suspeito para o roteador seguinte.</font></td></tr>
+							<tr valign=top><td>B.&nbsp;</td><td>Um switch ou hub entre dois roteadores está fora do ar ou bloqueado.
+							<font size=2>Um switch ou hub entre dois roteadores está fora do ar ou bloqueado.</font></td></tr>
 							</table><hr width=50%>
 							Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 							</center></div></div>
@@ -192,12 +192,12 @@ function setVisibility(id, visibility) {
 							<div id="y-y-n-n-d-y-i-i" style="display:none;"><div ><center><b>&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 							<table border=0 cellpadding=0 cellspacing=0 align=center width="400">
 							<tr valign=top><td colspan=2 align=center><b><u>Soluções Possíveis</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td>Destination server is down.
-							<font size=2>Wait patiently for it to come back up, or contact the company that owns it and inform them that it is down.  Try <a href="http://isup.me">http://isup.me</a> to see if the server is down for everybody on the Internet, not just you.</font></td></tr>
-							<tr valign=top><td>B.&nbsp;</td><td>Your internet connection (T1, DSL, cable, etc.) is down.
-							<font size=2>If the trace stops after your router that connects to the Internet, and that router seems to be functioning properly, call your ISP.</font></td></tr>
-							<tr valign=top><td>C.&nbsp;</td><td>A router on the Internet is down.
-							<font size=2>Wait patiently for it to come back up.</font></td></tr>
+							<tr valign=top><td>A.&nbsp;</td><td>Servidor de destino fora do ar.
+							<font size=2>Aguarde o servidor voltar ao ar ou contate a companhia responsável e informe que ele está fora do ar. Acesse <a href="http://isup.me">http://isup.me</a> para ver se o servidor está fora do ar para todo mundo e não só para você.</font></td></tr>
+							<tr valign=top><td>B.&nbsp;</td><td>Sua conexão de internet está fora do ar.
+							<font size=2>Se o rastreio para depois do seu roteador que se conecta à internet, e esse roteador parece estar funcionando corretamente, entre em contato com seu provedor de internet.</font></td></tr>
+							<tr valign=top><td>C.&nbsp;</td><td>Um roteador na internet está fora do ar.
+							<font size=2>Aguarde o roteador voltar ao ar.</font></td></tr>
 							</table><hr width=50%>
 							Problema resolvido?<br>Documentar a Solução<br>FIM</b>
 							</center></div></div>
@@ -205,8 +205,8 @@ function setVisibility(id, visibility) {
 							<div id="y-y-n-n-d-y-i-d" style="display:none;"><div ><center><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8595;<br>
 							<table border=0 cellpadding=0 cellspacing=0 align=center width="400">
 							<tr valign=top><td colspan=2 align=center><b><u>Soluções Possíveis</u></b></td></tr>
-							<tr valign=top><td>A.&nbsp;</td><td>Default gateway router’s outgoing interface is disconnected, disabled, misconfigured, or faulty.
-							<font size=2>Check its link-light.  Check its IP configuration.  Try pinging from the router itself to the next router.</font></td></tr>
+							<tr valign=top><td>A.&nbsp;</td><td>A interface de saída do roteador do gateway padrão está desconectada, desabilitada, configurada incorretamente ou com defeito.
+							<font size=2>Confira a luz de link dele. Confira a configuração de IP dele. Dê um ping a partir dele para o roteador seguinte.</font></td></tr>
 							<tr valign=top><td>B.&nbsp;</td><td>The switch/hub connected to the outgoing interface of the default gateway router is down or locked-up.
 							<font size=2>Check the power & link-lights on that switch/hub.</font></td></tr>
 							<tr valign=top><td>C.&nbsp;</td><td>DHCP server is giving out wrong subnet mask.
