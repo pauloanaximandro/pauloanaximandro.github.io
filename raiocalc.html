@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8"/>
+	<title>RaioCalc</title>
+
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="RaioCalc/jquery-1.2.2.pack.js"></script>
+
+	<style type="text/css">
+
+		div.htmltooltip{
+		position: absolute; /*leave this and next 3 values alone*/
+		z-index: 1000;
+		left: -1000px;
+		top: -1000px;
+		background: #272727;
+		border: 10px solid black;
+		color: white;
+		padding: 3px;
+		width: 250px; /*width of tooltip*/
+		}
+
+	</style>
+
+	<script type="text/javascript" src="RaioCalc/htmltooltip.js">
+
+	/***********************************************
+	* Inline HTML Tooltip script- by JavaScript Kit (http://www.javascriptkit.com)
+	* This notice must stay intact for usage
+	* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+	***********************************************/
+
+	</script>
+
+	<!-- <script type="text/javascript" src="raiocalc.js"></script> -->
+
+</head>
+<body>
+
+	<header class="container"><h1><strong>RAIOCALC</strong><p></p></h1>
+	<h6 style="color: #bbb">Calculadora de Tamanho dos Raios para Bicicleta</h6>
+	<hr>
+	</header> 
+	<p><br></p>
+	<p class="text-primary container" style="max-width: 50%">Informe os dados a seguir e clique em <b>Calcular</b> para saber o tamanho do raio:</p>
+
+	<form class="container" style="max-width: 50%" onsubmit="return false">
+
+		<!-- <table style="text-align: right;"> -->
+		<table class="table table-secondary">
+			<tr>
+				<td><label for="furos">Furos</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="furos" id="furos"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Quantidade de furos. Deve ser igual no aro e no cubo (somando-se os furos das duas flanges do cubo).</div>
+			</tr>
+			<tr>
+				<td><label for="ERD">Diâmetro Efetivo do Aro (E.R.D.)</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="ERD" id="ERD" step="0.01"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Diâmetro efetivo do aro. Consiste no diâmetro interno do aro + 2 x sua espessura.</div>
+			</tr>
+			<tr>
+				<td><label for="diam-flange">Diâmetro da flange</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="diam-flange" id="diam-flange" step="0.01"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Diâmetro do círculo formado pelos furos da flange do cubo. Deve ser medido do meio do furo ao meio do furo diametralmente oposto.</div>
+			</tr>
+			<tr>
+				<td><label for="diam-furos">Diâmetro dos furos</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="diam-furos" id="diam-furos" step="0.01"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Diâmetro dos furos da flange do cubo.</div>
+			</tr>
+			<tr>
+				<td><label for="dist-flanges">Distância entre flanges</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="dist-flanges" id="dist-flanges" step="0.01"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Distância entre as flanges, medida do centro de uma flange ao centro da outra.</div>
+			</tr>
+<!-- 			<tr>
+				<td><label for="dist-esq-centro">Distância flange esquerda - centro</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="dist-esq-centro" id="dist-esq-centro"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Distância do meio da flange esquerda ao centro do cubo.</div>
+			</tr>
+			<tr>
+				<td><label for="dist-dir-centro">Distância flange direita - centro</label></td>
+				<td style="text-align: left;"><input class="form-control" type="number" name="dist-dir-centro" id="dist-dir-centro"></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Distância do meio da flange direita ao centro do cubo.</div>
+			</tr> -->
+			<tr>
+				<td><label for="cruzes">Cruzamento</label></td>
+				<td><select class="custom-select" name="cruzes" id="cruzes">
+					<option value="" disabled selected>Escolha...</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="0">0</option>
+				</select></td>
+				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
+				<div class="htmltooltip">Padrão de cruzamento dos raios (quantas vezes cada raio cruza outros.</div>
+			</tr>
+			<tr class="table-primary">
+				<td><input name="calcular" id="calcular" class="btn-primary form-control" type="submit" value="Calcular" onclick="calcularRaio()"></td>
+				<td style="text-align: center; vertical-align: middle; color: #128F22"><label id="result" style="font-size: large; font-weight: bold;"></label></td>
+				<td></td>
+			</tr>
+		</table>
+
+	</form>
+
+	<script type="text/javascript">
+
+		function calcularRaio() {
+
+			// dados primários
+			N = document.getElementById("furos").value;
+			D = document.getElementById("ERD").value;
+			d = document.getElementById("diam-flange").value;
+			S = document.getElementById("diam-furos").value;
+			W = document.getElementById("dist-flanges").value;
+			X = document.getElementById("cruzes").value;
+
+			// dados secundários
+			T = 360 * X/(N/2);
+			A = (d/2) * Math.sin(T * Math.PI/180);
+			B = D/2 - ((d/2) * Math.cos(T * Math.PI/180));
+			C = W/2;
+			
+			// fórmula do livro Bike Wheel, de Jobst Brandt. 3a Edição, pág. 127
+			raio = Math.sqrt(A*A + B*B + C*C) - S/2;
+
+			document.getElementById("result").innerHTML = raio.toFixed(2);
+
+		}
+		
+	</script>
+
+</body>
+</html>
