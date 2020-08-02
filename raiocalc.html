@@ -72,7 +72,7 @@
 				<td><label for="diam-flange">Diâmetro da flange</label></td>
 				<td style="text-align: left;"><input class="form-control" type="number" name="diam-flange" id="diam-flange" step="0.01"></td>
 				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
-				<div class="htmltooltip">Diâmetro do círculo formado pelos furos da flange do cubo. Deve ser medido do meio do furo ao meio do furo diametralmente oposto.</div>
+				<div class="htmltooltip">Diâmetro do círculo formado pelos furos da flange do cubo. Deve ser medido do meio de um furo ao meio do furo diametralmente oposto.</div>
 			</tr>
 			<tr>
 				<td><label for="diam-furos">Diâmetro dos furos</label></td>
@@ -99,12 +99,14 @@
 				<div class="htmltooltip">Distância do meio da flange direita ao centro do cubo.</div>
 			</tr> -->
 			<tr>
-				<td><label for="cruzes">Cruzamento</label></td>
+				<td><label for="cruzes">Padrão de cruzamento</label></td>
 				<td><select class="custom-select" name="cruzes" id="cruzes">
 					<option value="" disabled selected>Escolha...</option>
+					<option value="5">5</option>
 					<option value="4">4</option>
 					<option value="3">3</option>
 					<option value="2">2</option>
+					<option value="1">1</option>
 					<option value="0">0</option>
 				</select></td>
 				<td><a href ="#" rel="htmltooltip"><input class="btn-primary form-control" type="button" value="?" name=""></a></td>
